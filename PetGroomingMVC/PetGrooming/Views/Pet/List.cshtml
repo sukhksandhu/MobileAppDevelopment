@@ -3,27 +3,28 @@
 @{
     ViewBag.Title = "List";
 }
-
+<!--code referenced from https://github.com/christinebittle/PetGroomingMVC
+ for the purpose of class assignment , dated 30 january, 2020 #PetGroomingMVC-->
 <h2>List of Pets</h2>
 
 <!--this is link to go to view add and runs code Add for view in Pet controller-->
-<a  id ="AddPet" href="/Pet/Add">Add Pet</a>
-@{ 
-    foreach(var Pet in Model)
+<a id="AddPet" href="/Pet/Add">Add Pet</a>
+@{
+    foreach (var Pet in Model)
     {
-    <div id="divlist">
-        <span><a id="petname" href="/Pet/Show/@Pet.PetID">@Pet.PetName</a></span>
-        <span id="deletelink"><a href="/Pet/Delete/@Pet.PetID">Delete</a></span>
-        <span id="updatelink"><a href="/Pet/Update/@Pet.PetID">Update</a></span>
-        <div id="div2">
-            Species:<span>@Pet.Species.Name</span>
-            Weight:<span>@Pet.Weight Kg</span>
-            Color:<span>@Pet.Color</span>
-            Notes:<span>
-                @Pet.Notes
-            </span>
-        </div>
+        <div id="divlist">
+            <span><a id="petname" href="/Pet/Show/@Pet.PetID">@Pet.PetName</a></span>
+            <span id="deletelink"><a href="/Pet/Delete/@Pet.PetID">Delete</a></span>
+            <span id="updatelink"><a href="/Pet/Update/@Pet.PetID">Update</a></span>
+            <div id="div2">
+                Species:<span>@Pet.Species.Name</span>
+                Weight:<span>@Pet.Weight Kg</span>
+                Color:<span>@Pet.Color</span>
+                Notes:<span>
+                    @Pet.Notes
+                </span>
+            </div>
 
-    </div>
+        </div>
     }
 }

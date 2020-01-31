@@ -2,11 +2,12 @@
 @{
     ViewBag.Title = "Add";
 }
-
+<!--code referenced from https://github.com/christinebittle/PetGroomingMVC 
+ for the purpose of class assignment , dated 30 january, 2020 #PetGroomingMVC-->
 <h2>Add a New Pet</h2>
 <!--this form on submit goes to controller Pet and look for method Add followed by [httppost]-->
 <form method="POST" action="/Pet/Add">
-    
+
     <div id="divadd">
         <div><span>Name:</span><input id="PetName" type="text" name="PetName" /></div>
         <div>
@@ -15,7 +16,7 @@
             <select id="SpeciesID" type="text" name="SpeciesID">
                 @{
                     //A rendering loop for presenting a list of species
-                   
+
                     foreach (var species in Model)
                     {
                         <option value="@species.SpeciesID">@species.Name</option>

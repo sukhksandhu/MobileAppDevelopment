@@ -2,15 +2,16 @@
 @{
     ViewBag.Title = "Update";
 }
-
-    <h2>Update Species </h2>
+<!--code referenced from https://github.com/christinebittle/PetGroomingMVC
+ for the purpose of class assignment , dated 30 january, 2020 #PetGroomingMVC-->
+<h2>Update Species </h2>
 <!--update the species -->
 <!--when the update button is clicked on this form it goes to controller Species and loks for method [httppost]update-->
 Species name : @Model.Name
-    <form method="POST" action="/Species/Update/@Model.SpeciesID">
-        
-        <div><span>Species Name:</span><input id="Name" type="text" name="Name" value="@Model.Name" /></div>
-        
+<form method="POST" action="/Species/Update/@Model.SpeciesID">
 
-        <input type="submit" value="Update Species">
-    </form>
+    <div><span>Species Name:</span><input id="Name" type="text" name="Name" value="@Model.Name" /></div>
+
+
+    <input type="submit" value="Update Species">
+</form>

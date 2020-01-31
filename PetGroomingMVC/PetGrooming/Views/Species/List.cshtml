@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "List";
 }
-
+<!--code referenced from https://github.com/christinebittle/PetGroomingMVC
+ for the purpose of class assignment , dated 30 january, 2020 #PetGroomingMVC-->
 <h2>List</h2>
 <!--this is link to go to view add-->
 <a href="/Species/Add">Add Species</a>
@@ -10,14 +11,15 @@
 @{
     foreach (var species in Model)
     {
-        <div>
-            <!--on clicking the name of the pet opens up show page and show the details-->
-            <span><a href="/Species/Show/@species.SpeciesID">@species.Name</a></span>
-            <!--when clicked opens up update view for the pet associated with the click-->
-            <span><a href="/Species/Update/@species.SpeciesID">Update</a></span>
-            <!--delete by going to controller and delete function-->
-            <span><a href="/Species/Delete/@species.SpeciesID">Delete</a></span>
+    <div id="divlist">
+        <!--on clicking the name of the pet opens up show page and show the details-->
+        <span><a href="/Species/Show/@species.SpeciesID">@species.Name</a></span>
+        <!--delete by going to controller and delete function-->
+        <span id="deletelink"><a href="/Species/Delete/@species.SpeciesID">Delete</a></span>
+        <!--when clicked opens up update view for the pet associated with the click-->
+        <span id="updatelink"><a href="/Species/Update/@species.SpeciesID">Update</a></span>
 
-        </div>
+
+    </div>
     }
 }

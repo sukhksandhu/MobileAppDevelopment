@@ -2,10 +2,13 @@
 @{
     ViewBag.Title = "Update";
 }
+<!--code referenced from https://github.com/christinebittle/PetGroomingMVC
+ for the purpose of class assignment , dated 30 january, 2020 #PetGroomingMVC-->
+
 <!--opens this page when the link update clicked in list page-->
 <h2>Update</h2>
-<form id ="updateform" method="POST" action="/Pet/Update/@Model.pet.PetID">
-    
+<form id="updateform" method="POST" action="/Pet/Update/@Model.pet.PetID">
+
     <div id="divupdate">
         <div><span>Pet Name:</span><input id="PetName" type="text" name="PetName" value="@Model.pet.PetName" /></div>
         <div><span>Weight:</span><input id="Weight" type="text" name="Weight" value="@Model.pet.Weight" />Kg</div>
@@ -18,7 +21,7 @@
         <select id="SpeciesID" type="text" name="SpeciesID">
             @{
                 //A rendering loop for presenting a list of species
-                //it checks if species is associated with selected pet keeps the species selected and keeps 
+                //it checks if species is associated with selected pet keeps the species selected and keeps
                 //on the top of the dropdown list
 
 

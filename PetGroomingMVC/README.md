@@ -1,4 +1,5 @@
-# PetGroomingMVC
+#copied read me and code referenced from https://github.com/christinebittle/PetGroomingMVC for the purpose of class assignment , dated 30 january, 2020 
+#PetGroomingMVC
 
 ## Updating an existing repo steps
 - run git stash to avoid conflicts between remote and local repository

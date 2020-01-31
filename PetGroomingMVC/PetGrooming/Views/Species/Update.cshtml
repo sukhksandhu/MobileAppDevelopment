@@ -4,9 +4,11 @@
 }
 
     <h2>Update Species </h2>
+<!--update the species -->
+<!--when the update button is clicked on this form it goes to controller Species and loks for method [httppost]update-->
 Species name : @Model.Name
     <form method="POST" action="/Species/Update/@Model.SpeciesID">
-        <!-- TODO: format this nicely -->
+        
         <div><span>Species Name:</span><input id="Name" type="text" name="Name" value="@Model.Name" /></div>
         
 

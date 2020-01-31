@@ -7,6 +7,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +22,64 @@ input,
 select,
 textarea {
     max-width: 280px;
+  
+}
+/*Show Pets names */
+#petname {
+    color: green;
+    font-size: large;
+}
+#divlist{
+    margin-top:1em;
+    border-bottom:1px solid black;
+    margin-left:10em;   
+}
+/*links on list page*/
+#AddPet {
+    padding: 1em;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    background-color: greenyellow;
+}
+#deletelink,#updatelink{
+    padding:1em;
+}
+#deletelink > a {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
+#updatelink > a {
+    color: #f79402;
+    font-weight: bold;
+    font-size: 14px;
+}
+#div2{
+    margin-top:1em;
+    font-weight:bold;
+    
+}
+#div2>span{
+    
+    margin:1em;
+    font-weight:normal;
+}
+h2 {
+    text-align: center;
+}
+
+#divadd>div,#divupdate>div{
+
+    margin-top:1em;
+}
+#updateform,#divshow{
+    background-color:bisque;
+    padding:1em;
+}
+#divshow{
+    border-bottom:1px solid red;
+}
+#divshow>div{
+    font-size:20px;
 }

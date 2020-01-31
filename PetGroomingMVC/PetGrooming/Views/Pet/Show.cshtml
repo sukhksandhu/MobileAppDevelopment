@@ -3,11 +3,12 @@
 @{
     ViewBag.Title = "Show";
 }
-
+<!--this page opens to view the details of the pet when name of pet is clicked in List View-->
 <h2>Show Pet</h2>
-
-<div>Name : @Model.PetName</div>
-<div>Weight : @Model.Weight KG</div>
-<div>Species : @Model.Species.Name</div>
-<div>Color : @Model.Color</div>
-<div>Notes : @Model.Notes</div>
+<div id="divshow">
+    <div>Name : @Model.PetName</div>
+    <div>Weight : @Model.Weight KG</div>
+    <div>Species : @Model.Species.Name</div>
+    <div>Color : @Model.Color</div>
+    <div>Notes : @Model.Notes</div>
+</div>

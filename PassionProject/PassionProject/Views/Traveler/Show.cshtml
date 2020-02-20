@@ -1,0 +1,16 @@
+﻿@model PassionProject.Models.ViewModels.ShowTraveler
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+<h2>@Model.traveler.TravelerfName @Model.traveler.TravelerlName</h2>
+<div class="col2">
+    <div><span>First Name:</span> @Model.traveler.TravelerfName</div>
+    <div><span>Last Name:</span>@Model.traveler.TravelerlName</div>
+    <div><span>Contact</span> @Model.traveler.TravelerContact</div>
+    <div><span>Guests:</span>@Model.traveler.Guests</div>
+    <div><span>Email:</span>@Model.traveler.TravelerEmail</div>
+    
+</div>

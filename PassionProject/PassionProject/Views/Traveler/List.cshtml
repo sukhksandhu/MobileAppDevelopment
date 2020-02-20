@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<div class="tilecontainer">
+    @foreach (var traveler in @Model)
+    {
+        <div class="listitem">
+            <div><a href="/Traveler/Show/@traveler.TravelerId">@traveler.TravelerlName, @traveler.TravelerfName</a></div>
+            <div>Contact: @traveler.TravelerContact</div>
+            <div>Guests Number: @traveler.Guests</div>
+        </div>
+    }
+</div>

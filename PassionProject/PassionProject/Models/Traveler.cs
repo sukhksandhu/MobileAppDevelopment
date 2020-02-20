@@ -17,6 +17,6 @@ namespace PassionProject.Models
         public string TravelerContact { get; set; }
         public int Guests { get; set; }
         public string TravelerEmail { get; set; }
-        public ICollection<TripxTraveler> TripxTraveler { get; set; }
+        public ICollection<Trip> Trips { get; set; }
     }
 }

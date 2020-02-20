@@ -21,7 +21,7 @@ namespace PassionProject.Models
       
         public virtual Destination Destination { get; set; }
 
-        public ICollection<TripxTraveler> TripxTraveler { get; set; }
+        public ICollection<Traveler>Travelers { get; set; }
 
     }
 }

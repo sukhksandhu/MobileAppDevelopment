@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<div class="navbar">
+    <a class="navlink" href="/Traveler/List">Back to List</a>
+</div>
+<div>
+    <div class="col2">
+        <form method="post" action="/Traveler/Add">
+            <div class="inpfield"><span>First Name:</span><input type="text" name="TravelerfName" id="TravelerfName" /></div>
+            <div class="inpfield"><span>Last Name:</span><input type="text" name="TravelerlName" id="TravelerlName" /></div>
+
+            <div class="inpfield"><span>Contact:</span><input type="text" name="TravelerContact" id="TravelerContact" /></div>
+            <div class="inpfield"><span>Guests:</span><input type="text" name="Guests" id="Guests" /></div>
+            <div class="inpfield"><span>Email:</span><input type="text" name="TravelerEmail" id="TravelerEmail" /></div>
+            <input type="submit" value="Add Traveler" />
+        </form>
+    </div>
+    <div class="col2last"></div>
+    <div style="clear:both;"></div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model List<PassionProject.Models.Trip>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>All Trips</h2>
+<div><a id="AddTrip" href="/Trip/Add">Add Trip</a></div>
+@{
+    foreach (var trip in Model)
+    {
+        <span id="updatelink"><a href="/Trip/Update/@trip.TripId">Update</a></span>
+        <span id="deletelink"><a href="/Trip/Delete/@trip.TripId">Delete</a></span>
+        <div id="div2">
+            Trip To : <span>@trip.Destination.DestinationName</span>
+            <div>
+                Date: <span>@trip.TripDate </span>
+            </div>
+            <div>
+                Cost:<span>@trip.TripCost </span>
+            </div>
+
+        </div>
+
+
+    }
+}

@@ -1,0 +1,32 @@
+﻿@model List<PassionProject.Models.Destination>
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<form method="POST" action="/Trip/Add">
+
+    <div id="divadd">
+        <div><span> Trip Date:</span><input id="TripDate" type="datetime" name="TripDate" /></div>
+         
+        <div>
+
+            <span>Trip To:</span>
+            <select id="DestinationId" type="text" name="DestinationId">
+                @{
+                    //A rendering loop for presenting a list of species
+
+                    foreach (var destination in Model)
+                    {
+                        <option value="@destination.DestinationId">@destination.DestinationName</option>
+
+                    }
+                }
+            </select>
+        </div>
+
+        <div><span>Cost</span><input id="TripCost" type="text" name="TripCost" /></div>
+
+        <input type="submit" value="Add Trip"><!--on clicked form goes where action specifies-->
+    </div>
+</form>

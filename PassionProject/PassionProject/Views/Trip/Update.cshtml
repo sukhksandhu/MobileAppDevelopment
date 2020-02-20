@@ -1,0 +1,39 @@
+﻿@model PassionProject.Models.ViewModels.UpdateTrip
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<form method="POST" action="/Trip/Update/@Model.trip.TripId">
+
+    <div id="divadd">
+        <div><span> Trip Date:</span><input id="TripDate" type="datetime" name="TripDate" /></div>
+
+        <div>
+
+            <span>Trip To:</span>
+            <select id="DestinationId" type="text" name="DestinationId">
+                @{
+                    //A rendering loop for presenting a list of species
+
+                    foreach (var destination in Model.dest)
+                    {
+                        if (destination.DestinationId == Model.trip.DestinationId)
+                        {
+                            <option value="@destination.DestinationId" selected>@destination.DestinationName</option>
+                        }
+                        else
+                        {
+                            <option value="@destination.DestinationId">@destination.DestinationName</option>
+                        }
+                    }
+                }
+            </select>
+        </div>
+
+        <div><span>Cost</span><input id="TripCost" type="text" name="TripCost" /></div>
+
+        <input type="submit" value="Update Trip"><!--on clicked form goes where action specifies-->
+    </div>
+</form>

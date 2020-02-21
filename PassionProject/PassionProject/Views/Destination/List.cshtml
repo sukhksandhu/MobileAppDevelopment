@@ -2,20 +2,25 @@
 @{
     ViewBag.Title = "Destination";
 }
-
+<!--when run this file shows the list of all the destinations-->
 <h2>Destinations</h2>
 <a href="/Destination/Add">Add Destination</a>
+<!--you can add new destination by clicking on this add , this add says that go to the destination controller,
+   and execute the add method which sends to the view add which then takes the values from user to add -->
 @{
     foreach (var destination in Model)
     {
-        <div id="divlist">
+    <div id="divlist">
 
-            <span>@destination.DestinationName</span>
+        <span>@destination.DestinationName</span>
+        <!--this is delete link beside every desination name which goes to destination controller and execute the delete
+        method-->
+        <span id="deletelink"><a href="/Destination/Delete/@destination.DestinationId">Delete</a></span>
+        <!--this is update link beside every desination name which goes to destination controller and execute the update
+        method without the one with post-->
+        <span id="updatelink"><a href="/Destination/Update/@destination.DestinationId">Update</a></span>
 
-            <span id="deletelink"><a href="/Destination/Delete/@destination.DestinationId">Delete</a></span>
-            <span id="updatelink"><a href="/Destination/Update/@destination.DestinationId">Update</a></span>
-
-        </div>
+    </div>
     }
 }
 

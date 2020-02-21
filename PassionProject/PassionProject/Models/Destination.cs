@@ -12,8 +12,10 @@ namespace PassionProject.Models
     {
         [Key]
         public int DestinationId { get; set; }
+        //defining the integer destinationid as the primary key
         public string DestinationName { get; set; }
-
+        //defining the destination name
         public ICollection<Trip> Trip { get; set; }
+        //defines the relation one destination to many trips
     }
 }

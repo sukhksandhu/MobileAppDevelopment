@@ -18,10 +18,10 @@ namespace PassionProject.Controllers
     {
         private Passion db = new Passion();
 
-        // GET: GroomService/List
+       
         public ActionResult List()
         {
-            //How could we modify this to include a search bar?
+            
             List<Traveler> travelers = db.Travelers.SqlQuery("Select * from Travelers").ToList();
             return View(travelers);
 
@@ -38,7 +38,7 @@ namespace PassionProject.Controllers
         }
         public ActionResult Show(int id)
         {
-            //find data about the individual owner
+           
             string main_query = "select * from Travelers where TravelerId = @id";
             var pk_parameter = new SqlParameter("@id", id);
             Traveler traveler = db.Travelers.SqlQuery(main_query, pk_parameter).FirstOrDefault();
@@ -51,10 +51,7 @@ namespace PassionProject.Controllers
             string all_trips_query = "select * from Trips";
             List<Trip> alltrips = db.Trips.SqlQuery(all_trips_query).ToList();
 
-            //ViewModel is a hybrid of three classifications of information
-            //(1) showing the classic owner data
-            //(2) showing all pets that owner has
-            //(3) showing all pets in general (for ADD)
+           
             ShowTraveler viewmodel = new ShowTraveler();
             viewmodel.traveler = traveler;
             viewmodel.trips = TravelerTrips;

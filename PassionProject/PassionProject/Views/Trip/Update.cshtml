@@ -4,6 +4,7 @@
 }
 
 <h2>Update</h2>
+<!--update view for updating the trip-->
 
 <form method="POST" action="/Trip/Update/@Model.trip.TripId">
 
@@ -15,7 +16,8 @@
             <span>Trip To:</span>
             <select id="DestinationId" type="text" name="DestinationId">
                 @{
-                    //A rendering loop for presenting a list of species
+                    //A rendering loop for presenting a list of destinations
+                    //user can choose the destination from the drop down list here and update
 
                     foreach (var destination in Model.dest)
                     {

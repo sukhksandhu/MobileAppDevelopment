@@ -175,6 +175,10 @@
     <Compile Include="Migrations\202002202040439_bridge1.designer.cs">
       <DependentUpon>202002202040439_bridge1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002210249198_final.cs" />
+    <Compile Include="Migrations\202002210249198_final.designer.cs">
+      <DependentUpon>202002210249198_final.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Destination.cs" />
     <Compile Include="Models\Traveler.cs" />
@@ -233,6 +237,7 @@
     <Content Include="Views\Traveler\List.cshtml" />
     <Content Include="Views\Traveler\Show.cshtml" />
     <Content Include="Views\Traveler\Add.cshtml" />
+    <Content Include="Views\Trip\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002202040439_bridge1.resx">
       <DependentUpon>202002202040439_bridge1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002210249198_final.resx">
+      <DependentUpon>202002210249198_final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

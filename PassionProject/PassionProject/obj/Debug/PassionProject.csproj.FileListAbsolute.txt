@@ -178,3 +178,4 @@ C:\Users\SiMrAn\Documents\zsem2\MobileApp\GitHub\MobileAppDevelopment\PassionPro
 C:\Users\SiMrAn\Documents\zsem2\MobileApp\GitHub\MobileAppDevelopment\PassionProject\PassionProject\obj\Debug\PassionProject.pdb
 C:\Users\SiMrAn\Documents\zsem2\MobileApp\GitHub\MobileAppDevelopment\PassionProject\PassionProject\obj\Debug\PassionProject.Migrations.bridge.resources
 C:\Users\SiMrAn\Documents\zsem2\MobileApp\GitHub\MobileAppDevelopment\PassionProject\PassionProject\obj\Debug\PassionProject.Migrations.bridge1.resources
+C:\Users\SiMrAn\Documents\zsem2\MobileApp\GitHub\MobileAppDevelopment\PassionProject\PassionProject\obj\Debug\PassionProject.Migrations.final.resources

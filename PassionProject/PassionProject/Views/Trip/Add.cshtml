@@ -4,9 +4,12 @@
 }
 
 <h2>Add</h2>
-<form method="POST" action="/Trip/Add">
+<form method="POST" action="/Trip/Add"><!--after post it goes to Trip controller and Add method followed after 
+httppost which adds the trip information entered here 
+into the database-->
 
     <div id="divadd">
+        <!--user can enter all the information here to add the trip -->
         <div><span> Trip Date:</span><input id="TripDate" type="datetime" name="TripDate" /></div>
          
         <div>
@@ -14,7 +17,7 @@
             <span>Trip To:</span>
             <select id="DestinationId" type="text" name="DestinationId">
                 @{
-                    //A rendering loop for presenting a list of species
+                    //A rendering loop for presenting a list of destinations
 
                     foreach (var destination in Model)
                     {

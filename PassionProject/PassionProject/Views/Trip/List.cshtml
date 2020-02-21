@@ -11,13 +11,13 @@
         <span id="updatelink"><a href="/Trip/Update/@trip.TripId">Update</a></span>
         <span id="deletelink"><a href="/Trip/Delete/@trip.TripId">Delete</a></span>
         <div id="div2">
-            Trip To : <span>@trip.Destination.DestinationName</span>
+            Trip To : <div><a href="/Trip/Show/@trip.TripId">@trip.Destination.DestinationName </a></div>
             <div>
                 Date: <span>@trip.TripDate </span>
             </div>
             
             <div>
-                Cost:<span>@trip.TripCost </span>
+                Cost:<span>@trip.TripCost $</span>
             </div>
 
         </div>

@@ -9,7 +9,7 @@ namespace PassionProject.Models.ViewModels
     {
         public virtual Trip trip { get; set; }
 
-     
+        //a list for every traveler 
         public List<Traveler> travelers { get; set; }
     }
 }

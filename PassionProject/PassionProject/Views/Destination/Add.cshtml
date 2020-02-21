@@ -7,8 +7,10 @@
 
 <form method="POST" action="/Destination/Add">
 
-    <div><span>Name:</span><input id="DestinationName" type="text" name="DestinationName" /></div>
+    <div><span>Name:</span><input id="DestinationName" type="text" name="DestinationName" />
+    <!--here user input the name of destination which goes into the database after httppost Add method--></div>
    
-
+    <!--when this submit buttn is clicked of add destination , it follows the path of action defined above,
+        which is in destination controller and method Add but with httpPost-->
     <input type="submit" value="Add Destination">
 </form>

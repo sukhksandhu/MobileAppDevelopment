@@ -7,6 +7,7 @@ namespace PassionProject.Models.ViewModels
 {
     public class UpdateTrip
     {
+        //this is used while updating the trip where we need both destination information and trip info
         public Trip trip
         {
             get;

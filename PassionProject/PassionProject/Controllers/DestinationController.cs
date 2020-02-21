@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PassionProject.Models;
+//need this for using entity framework after installing the entity
 using System.Data.Entity;
 using PassionProject.Data;
 using System.Data.SqlClient;
@@ -16,7 +17,7 @@ namespace PassionProject.Controllers
 {
     public class DestinationController : Controller
     {
-        private Passion db = new Passion();
+        private Passion db = new Passion();//defines db object from database context file named as Passion.cs
         // GET: Destination
         public ActionResult Index()
             //default created you can right click here and create view page the name should be 
@@ -30,13 +31,13 @@ namespace PassionProject.Controllers
             return View(dest);
         }
 
-        public ActionResult Add()//Add.cshtml in view shows execution of this property
+        public ActionResult Add()//Add.cshtml in view inside destination shows execution of this property
         {
            
 
-            List<Destination> dest = db.Destinations.SqlQuery("select * from Destinations").ToList();
+           // List<Destination> dest = db.Destinations.SqlQuery("select * from Destinations").ToList();
 
-            return View(dest);
+            return View();
         }
         [HttpPost]
         public ActionResult Add(string DestinationName)
@@ -54,7 +55,8 @@ namespace PassionProject.Controllers
 
             return RedirectToAction("List");
         }
-        
+        //when user clicks on update link which was in list file it executes this method which then opens up the view update
+        //
         public ActionResult Update(int? id)
         {
             if (id == null)
@@ -70,6 +72,8 @@ namespace PassionProject.Controllers
             return View(destination);
 
         }
+        //when update button is cicked after entering the updated values, this method runs and it insert the values,
+        //into the database and successfully update the values entered by the user 
         [HttpPost]
         public ActionResult Update(int id, string DestinationName)
         {
@@ -81,7 +85,7 @@ namespace PassionProject.Controllers
             return RedirectToAction("list");
         }
         public ActionResult Delete(int id)
-        {
+        {//delete method to delete the destination when clicked in list view
 
             string query = "delete from Destinations where DestinationId = @DestinationId";
             SqlParameter sqlparams = new SqlParameter("@DestinationId", id);
@@ -89,7 +93,7 @@ namespace PassionProject.Controllers
 
 
             db.Database.ExecuteSqlCommand(query, sqlparams);
-
+            //remains in list view after executing the delete query and successfully deleting the value from the database
             return RedirectToAction("List");
         }
 

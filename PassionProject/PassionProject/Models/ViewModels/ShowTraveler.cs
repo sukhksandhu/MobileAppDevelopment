@@ -8,11 +8,11 @@ namespace PassionProject.Models.ViewModels
     public class ShowTraveler
     {
         public virtual Traveler traveler { get; set; }
-        //a list for every pet they own
+        //a list for every trip 
         public List<Trip> trips { get; set; }
 
-        //a SEPARATE list for representing the ADD of an owner to a pet,
-        //i.e. show a dropdownlist of all pets, with cta "Add Pet" on Show Owner etc.
+        //a SEPARATE list for representing the ADD of a traveler to a trip,
+        
         public List<Trip> all_trips { get; set; }
     }
 }

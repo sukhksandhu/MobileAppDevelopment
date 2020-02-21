@@ -53,6 +53,32 @@ namespace PassionProject.Controllers
             db.Database.ExecuteSqlCommand(query, sqlparams);
             return RedirectToAction("List");
         }
+        public ActionResult Show(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+           
+            Trip trip = db.Trips.SqlQuery("select * from Trips where TripId=@TripId", new SqlParameter("@TripId", id)).FirstOrDefault();
+            if (trip == null)
+            {
+                return HttpNotFound();
+            }
+
+            //need information about the list of owners associated with that pet
+            string query = "select * from travelers inner join TravelerTrips on Travelers.TravelerId = TravelerTrips.Traveler_TravelerId where Trip_TripId = @id";
+            SqlParameter param = new SqlParameter("@id", id);
+            List<Traveler> TravelerTrips = db.Travelers.SqlQuery(query, param).ToList();
+
+
+            ShowTrip viewmodel = new ShowTrip();
+            viewmodel.trip = trip;
+            viewmodel.travelers = TravelerTrips;
+
+
+            return View(viewmodel);
+        }
         public ActionResult Update(int? id)
         {
             if (id == null)

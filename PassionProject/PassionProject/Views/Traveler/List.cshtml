@@ -6,9 +6,11 @@
 <h2>List</h2>
 
 <div class="tilecontainer">
+    <!--listing all the travelers in the database-->
     @foreach (var traveler in @Model)
     {
         <div class="listitem">
+            <!--name of the traveler is a link which goes to show page -->
             <div><a href="/Traveler/Show/@traveler.TravelerId">@traveler.TravelerlName, @traveler.TravelerfName</a></div>
             <div>Contact: @traveler.TravelerContact</div>
             <div>Guests Number: @traveler.Guests</div>

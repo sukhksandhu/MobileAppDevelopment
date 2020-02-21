@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Show";
 }
-
+<!---code referenced from https://github.com/christinebittle/PetGroomingMVC
+for the purpose of class assignment , dated 19 February, 2020 for Passion Project-->
 <h2>Travelers</h2>
 <!--show the information about the traveler when clicked in list view -->
 <h2>@Model.traveler.TravelerfName @Model.traveler.TravelerlName</h2>
@@ -12,19 +13,19 @@
     <div><span>Contact</span> @Model.traveler.TravelerContact</div>
     <div><span>Guests:</span>@Model.traveler.Guests</div>
     <div><span>Email:</span>@Model.traveler.TravelerEmail</div>
-    
+
 </div>
 <div class="col2last">
     <div class="sectionheader">Trips that traveler has:</div>
     @{
-    <!--I want to show the trips associated with this traveler but code for adding not implemented yet-->
+        <!--I want to show the trips associated with this traveler but code for adding not implemented yet-->
         foreach (var trip in @Model.trips)
         {
             //here i will show all the trips which are associated with this traveler shown above
             <div class="lineitem">
                 <a href="/Trip/Show/@trip.TripId">@trip.TripDate</a>
-                
-                
+
+
             </div>
         }
 

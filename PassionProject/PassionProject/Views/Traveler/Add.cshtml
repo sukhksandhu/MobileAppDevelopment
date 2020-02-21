@@ -2,29 +2,30 @@
 @{
     ViewBag.Title = "Add";
 }
-
+<!---code referenced from https://github.com/christinebittle/PetGroomingMVC
+for the purpose of class assignment , dated 19 February, 2020 for Passion Project-->
 <h2>Add</h2>
 <div class="navbar">
     <a class="navlink" href="/Traveler/List">Back to List</a>
 </div>
 
-    <!--here user input the name of traveler which goes into the database after httppost Add method-->
-   
-    <!--when this submit buttn is clicked of add traveler , it follows the path of action defined above,
-        which is in traveler controller and method Add but with httpPost-->
-    <div class="col2">
-        <form method="post" action="/Traveler/Add">
-            <div class="inpfield"><span>First Name:</span><input type="text" name="TravelerfName" id="TravelerfName" /></div>
-            <div class="inpfield"><span>Last Name:</span><input type="text" name="TravelerlName" id="TravelerlName" /></div>
+<!--here user input the name of traveler which goes into the database after httppost Add method-->
+<!--when this submit buttn is clicked of add traveler , it follows the path of action defined above,
+    which is in traveler controller and method Add but with httpPost-->
+<div class="col2">
+    <form method="post" action="/Traveler/Add">
+        <div class="inpfield"><span>First Name:</span><input type="text" name="TravelerfName" id="TravelerfName" /></div>
+        <div class="inpfield"><span>Last Name:</span><input type="text" name="TravelerlName" id="TravelerlName" /></div>
 
-            <div class="inpfield"><span>Contact:</span><input type="text" name="TravelerContact" id="TravelerContact" /></div>
-            <div class="inpfield"><span>Guests:</span><input type="text" name="Guests" id="Guests" /></div>
-            <div class="inpfield"><span>Email:</span><input type="text" name="TravelerEmail" id="TravelerEmail" />
-            </div>
-            <!--takes all the data here by the user about traveler-->
-            <input type="submit" value="Add Traveler" />
-            <!--after submit this one goes to controller httppost Add method -->
-        </form>
-    </div>
-    <div class="col2last"></div>
-    <div style="clear:both;"></div>
+        <div class="inpfield"><span>Contact:</span><input type="text" name="TravelerContact" id="TravelerContact" /></div>
+        <div class="inpfield"><span>Guests:</span><input type="text" name="Guests" id="Guests" /></div>
+        <div class="inpfield">
+            <span>Email:</span><input type="text" name="TravelerEmail" id="TravelerEmail" />
+        </div>
+        <!--takes all the data here by the user about traveler-->
+        <input type="submit" value="Add Traveler" />
+        <!--after submit this one goes to controller httppost Add method -->
+    </form>
+</div>
+<div class="col2last"></div>
+<div style="clear:both;"></div>

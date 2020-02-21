@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+//code referenced from https://github.com/christinebittle/PetGroomingMVC 
+//for the purpose of class assignment , dated 19 February, 2020 for Passion Project
 namespace PassionProject.Controllers
 {
     public class HomeController : Controller

@@ -6,6 +6,8 @@ using System.Data.Entity;
 
 namespace PassionProject.Data
 {
+    //code referenced from https://github.com/christinebittle/PetGroomingMVC 
+    //for the purpose of class assignment , dated 19 February, 2020 for Passion Project
     public class Passion :DbContext
     {
         public Passion() : base("name=Passion")//this is added to the connection string the web.config file

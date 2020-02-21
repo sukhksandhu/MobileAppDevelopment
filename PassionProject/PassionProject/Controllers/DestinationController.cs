@@ -11,7 +11,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Net;
 using System.Diagnostics;
-
+//code referenced from https://github.com/christinebittle/PetGroomingMVC 
+//for the purpose of class assignment , dated 19 February, 2020 for Passion Project
 
 namespace PassionProject.Controllers
 {

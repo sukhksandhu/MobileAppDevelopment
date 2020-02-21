@@ -6,6 +6,8 @@
 <h2>All Trips</h2>
 <div><a id="AddTrip" href="/Trip/Add">Add Trip</a></div>
 @{
+//code referenced from https://github.com/christinebittle/PetGroomingMVC 
+//for the purpose of class assignment , dated 19 February, 2020 for Passion Project
     foreach (var trip in Model)
     {
         <span id="updatelink"><a href="/Trip/Update/@trip.TripId">Update</a></span>
